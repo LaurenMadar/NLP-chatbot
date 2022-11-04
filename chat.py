@@ -20,6 +20,27 @@ class Chat_T:
         trainer = ListTrainer(self.chatbot)
         trainer.train(conversation)
 
+        additional_training = [
+            "Who are you?",
+            "Hi, can you tell me what your name is?",
+            "I have a question.",
+            "Please, explain your concern.",
+            "What is today's weather?",
+            "I am not sure where you are located, but everything is clear here.",
+            "Ok",
+            "Is there anything else I can help you with?",
+            "No.",
+            "If that is all, have a nice day.",
+            "What is NLP?",
+            "Only the BEST THING EVER! Well, in my opinion.",
+            "Who cares?",
+            "I'm sure many people care. So do I. How can I help?",
+            "Get lost.",
+            "Ok, sorry I couldn't help more."
+        ]
+
+        trainer.train(additional_training)
+
     def chat(self, t1):
         response = self.chatbot.get_response(t1)
         return response
